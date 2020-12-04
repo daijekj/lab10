@@ -28,12 +28,30 @@ public class testSelectionSort {
 		Sortedarr[3] = 9;
 		Sortedarr[4] = 10;
 		/** add tests to check for this unit test **/
+    SelectionSort test = new SelectionSort();
+		arr = test.basicSelectionSort(arr);
+		assertArrayEquals("PT Failed", Sortedarr, arr);
 
 		}
 
 	public void testNegative(){
 		/** Test data contains negative values only **/
-
+    int[] arr = new int[5];
+		arr[0] = -4;
+		arr[1] = -14;
+		arr[2] = -21;
+		arr[3] = -5;
+		arr[4] = -19;
+		int[] Sortedarr = new int[5];
+		Sortedarr[0] = -21;
+		Sortedarr[1] = -19;
+		Sortedarr[2] = -14;
+		Sortedarr[3] = -5;
+		Sortedarr[4] = -4;
+		/** add tests to check for this unit test **/
+		SelectionSort test = new SelectionSort();
+		arr = test.basicSelectionSort(arr);
+		assertArrayEquals("NT Failed", Sortedarr, arr);
 
 		}
 	public void testMixed(){
@@ -43,7 +61,7 @@ public class testSelectionSort {
 		}
 	public void testDuplicates(){
 		/** Test data contains duplicates **/
-		
+
 
 		}
 	}
